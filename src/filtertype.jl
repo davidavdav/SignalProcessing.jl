@@ -11,7 +11,7 @@ type Filter{T<:Real}
     function Filter(a::Vector{T}, b::Vector{T})
         xhist=zeros(length(b)-1)
         yhist=zeros(length(a)-1)
-        c = reverse(a[2:])/a[1]
+        c = reverse(a[2:end])/a[1]
         d = reverse(b)/a[1]
         new(a, b, c, d, xhist, yhist)
     end

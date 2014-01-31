@@ -23,7 +23,7 @@ function filter{T<:Real}(x::Vector{T}, f::Filter{T})
     end
     f.xhist=x[end-M+1:end]
     f.yhist=y[end-N+1:end]
-    return(y[N+1:])
+    return(y[N+1:end])
 end
 |{T<:Real}(x::Vector{T}, f::Filter{T}) = filter(x, f)
 

@@ -21,8 +21,8 @@ function filter{T<:Real}(x::Vector{T}, f::Filter{T})
         for j=1:M+1 s += f.d[j]*xx[n-1+j] end
         y[n+N] = s
     end
-    f.xhist=x[end-M+1:]
-    f.yhist=y[end-N+1:]
+    f.xhist=x[end-M+1:end]
+    f.yhist=y[end-N+1:end]
     return(y[N+1:])
 end
 |{T<:Real}(x::Vector{T}, f::Filter{T}) = filter(x, f)

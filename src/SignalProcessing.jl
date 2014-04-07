@@ -18,7 +18,7 @@ function hamming(n::Int)
         return 1;
     end
     n -= 1
-    return 0.54 - 0.46 * cos(2π*[0:n]/n)
+    return 0.54 .- 0.46 .* cos(2π*[0:n]/n)
 end
     
 function hanning(n::Int) 

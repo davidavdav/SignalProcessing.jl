@@ -28,7 +28,7 @@ end
 |{T<:Real}(x::Vector{T}, f::Filter{T}) = filter(x, f)
 
 ## Array generalization, possibly in parallel
-filter{T<:Real}(x::Array{T}, f::Filter{T}) = @parallel (hcat) for i=1:size(x,2) x[:,i] | copy(f) end
+filter{T<:Real}(x::Array{T}, f::Filter{T}) = mapslices(x->filter(x,copy(f)), x, 1)
 |{T<:Real}(x::Array{T}, f::Filter{T}) = filter(x, f)
 
 ##end

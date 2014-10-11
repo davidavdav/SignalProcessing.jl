@@ -1,6 +1,8 @@
 SignalProcessing
 ================
 
+Note: The functionality of this package has been absorbed by [Julia DSP](https://github.com/JuliaDSP/DSP.jl).  I'll keep this here for historic reasons. 
+
 This module contains some signalprocessing routines necessary for feature extraction for the most common features (MFCC, PLP) in speech processing. 
 
 Most of this is re-coded from octave 3.2.4.  
